@@ -71,6 +71,10 @@ function Chat({ socket, username, room }) {
         />
         <button onClick={sendMessage}>&#9658;</button>
       </div>
+      <div>
+        <p>Du är i rum: {room}</p>
+        <p>Alla aktiva rum: {room}</p>
+      </div>
     </div>
   );
 }

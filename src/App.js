@@ -2,6 +2,7 @@ import "./App.css";
 import io from "socket.io-client";
 import { useState } from "react";
 import Chat from "./Chat";
+// import ActiveRooms from "./ActiveRooms";
 
 const socket = io.connect("http://localhost:3001");
 
@@ -16,6 +17,14 @@ function App() {
       setShowChat(true);
     }
   };
+
+//   //skriva ut rum
+// socket.on ("list_of_rooms", (roomList) =>{
+//   console.log(roomList);
+//   })
+
+
+console.log(room);
 
   return (
     <div className="App">
@@ -40,6 +49,7 @@ function App() {
         </div>
       ) : (
         <Chat socket={socket} username={username} room={room} />
+   
       )}
     </div>
   );
